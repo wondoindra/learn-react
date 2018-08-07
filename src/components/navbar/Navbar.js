@@ -1,15 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
+import Home from "../pages/Home";
+import Yosho from "../pages/Yosho";
 import {
-  Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  Button
 } from "reactstrap";
 
-export default class Navigation extends React.Component {
+import { Route, NavLink, HashRouter } from "react-router-dom";
+
+export default class Navigation extends Component {
   constructor(props) {
     super(props);
 
@@ -27,23 +30,33 @@ export default class Navigation extends React.Component {
 
   render() {
     return (
-      <div>
-        <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="#"> ReactStrap </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="#"> Yosho </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#"> What We Do </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#"> About Us </NavLink>
-            </NavItem>
-          </Nav>
-        </Navbar>
-      </div>
+      <HashRouter>
+        <div>
+          <Navbar color="dark" dark expand="md">
+            <NavbarBrand href="#"> ReactStrap </NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink to="/">
+                  <Button color="dark"> Yosho </Button>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/yosho">
+                  <Button color="dark"> What we do </Button>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/yosho">
+                  <Button color="dark"> About Us </Button>
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Navbar>
+          <Route path="/yosho" component={Yosho} />
+          <Route exact path="/" component={Home} />
+        </div>
+      </HashRouter>
     );
   }
 }

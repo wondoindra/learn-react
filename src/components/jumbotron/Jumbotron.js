@@ -3,7 +3,7 @@ import { Jumbotron, Button, Container } from "reactstrap";
 
 const JumboContent = props => {
   return (
-    <Container>
+    <Container className="jumbotronmargin">
       <Jumbotron>
         <h1 className="display-3">Plan your future with Yosho</h1>
         <p className="lead">Plan, Change, Commit, Go on an Adventure!</p>

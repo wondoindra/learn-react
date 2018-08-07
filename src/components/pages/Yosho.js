@@ -9,36 +9,36 @@ import {
   CardBody
 } from "reactstrap";
 
-const CardContent = props => {
+const Yosho = props => {
   return (
-    <Container>
+    <Container className="jumbotronmargin">
       <CardDeck>
-        <Card>
+        <Card body outline color="success">
           <CardBody>
             <CardTitle> Spring Plan </CardTitle>
             <CardText> Plan for your spring attraction visists here! </CardText>
-            <Button>Spring Attractions</Button>
+            <Button color="success">Spring Attractions</Button>
           </CardBody>
         </Card>
-        <Card>
+        <Card body outline color="warning">
           <CardBody>
             <CardTitle> Summer Plan </CardTitle>
             <CardText> Plan for your long summer holiday here! </CardText>
-            <Button>Summer Specials</Button>
+            <Button color="warning">Summer Specials</Button>
           </CardBody>
         </Card>
-        <Card>
+        <Card body outline color="danger">
           <CardBody>
             <CardTitle> Fall Plan </CardTitle>
             <CardText> Plan for your fall festivals here! </CardText>
-            <Button>Fall Festivals</Button>
+            <Button color="danger">Fall Festivals</Button>
           </CardBody>
         </Card>
-        <Card>
+        <Card body outline color="info">
           <CardBody>
             <CardTitle> Winter Plan </CardTitle>
             <CardText> Plan for your Christmas celebration here! </CardText>
-            <Button>Be a Santa 101</Button>
+            <Button color="info">Be a Santa 101</Button>
           </CardBody>
         </Card>
       </CardDeck>
@@ -46,4 +46,4 @@ const CardContent = props => {
   );
 };
 
-export default CardContent;
+export default Yosho;

@@ -27,8 +27,16 @@
 }
 
 .carouselImg img {
-  background-size: cover;
-  background-position: center;
+  filter: brightness(70%);
+}
+
+.jumbotronmargin {
+  margin-top: 5%;
+}
+
+.footermargin {
+  margin: 0px;
+  margin-top: 3%;
 }
 
 @keyframes App-logo-spin {
